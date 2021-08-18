@@ -1,0 +1,49 @@
+.game-container {
+	background-color: palegreen;
+	display: flex;
+	flex-direction: column;
+	.card-row {
+		background-color: lightskyblue;
+		display: flex;
+		flex-direction: row;
+		.card {
+			height: 210px;
+			margin: 20px;
+			padding: 5px;
+			perspective: 500px;
+			width: 150px;
+			.card-faces {
+				&.flipped {
+					transform: rotateY(180deg);
+				}
+				height: 100%;
+				position: relative;
+				transform-style: preserve-3d;
+				transition: transform 0.75s;
+				width: 100%;
+				.card-face {
+					background-color: plum;
+					border: 2px solid gray;
+					border-radius: 10px;
+					height: 100%;
+					position: absolute;
+					width: 100%;
+					.image {
+						img {
+							height: 150px;
+							width: 150px;
+						}
+					}
+					.name {
+						background-color: salmon;
+						text-align: center;
+						width: 150px;
+					}
+				}
+				.front-face {
+					transform: rotateY(180deg);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+%h1 Memory Game
+%p.notice= notice
+.new-game
+	Start new game:
+	= form_with model: Game.new, local: true do |form|
+		= form.label :rows
+		= form.number_field :rows
+		= form.label :columns
+		= form.number_field :columns
+		= form.label :group_size
+		= form.number_field :group_size
+		= form.submit
+- if @game.present?
+	- if @game.errors.any?
+		.errors
+			Can't create game:
+			%ul
+			- @game.errors.each do |e|
+				%li= e.full_message
+	- else
+		#game{ data: { id: @game.id, group_size: @game.group_size } }
+			.game-container
+				- 1.upto(@game.rows).each do |row|
+					.card-row
+						- 1.upto(@game.columns).each do |column|
+							- game_card = @game.game_card_at(@game.position_at(row, column))
+							- card = game_card.card
+							.card{ data: { id: card.id, solved: game_card.solved? } }
+								.card-faces
+									.card-face.front-face
+										.image= image_tag card.image
+										.name= card.name
+									.card-face.back-face
