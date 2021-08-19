@@ -30,16 +30,6 @@ RSpec.describe "Games", type: :request do
         expect(response).to have_http_status :not_found
       end
     end
-    context 'with errors in solving card' do
-      it 'fails' do
-        game_id = game.id
-        game = double(game)
-        allow(game).to receive(:id).and_return game_id
-        expect(game).to receive(:solve).with(card).and_return false
-        post "/games/#{game.id}/solve_card", headers: json_headers, params: { card_id: card.id }
-        expect(response).to have_http_status :unprocessable_entity
-      end
-    end
     context 'under normal conditions' do
       it 'works' do
         post "/games/#{game.id}/solve_card", headers: json_headers, params: { card_id: card.id }

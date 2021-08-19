@@ -1,5 +1,5 @@
 %h1 Memory Game
-%p.notice= notice
+%p#notice= notice
 .new-game
 	Start new game:
 	= form_with model: Game.new, local: true do |form|
@@ -28,6 +28,8 @@
 							.card{ data: { id: card.id, solved: game_card.solved? } }
 								.card-faces
 									.card-face.front-face
-										.image= image_tag card.image
+										.image
+											- if image_exists?(card.image)
+												= image_tag card.image
 										.name= card.name
 									.card-face.back-face

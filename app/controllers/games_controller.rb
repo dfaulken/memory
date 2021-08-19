@@ -5,8 +5,8 @@ class GamesController < ApplicationController
   def create
     @game = Game.new(params.require(:game).permit(:rows, :columns, :group_size))
     if @game.save && @game.populate_cards!
-      redirect_to @game
-    else render 'main'
+      redirect_to @game, notice: 'Created game.'
+    else render 'main', notice: 'Could not create game.'
     end
   end
 
