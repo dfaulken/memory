@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 Card.create name: 'Math YouTuber 3blue1brown', image: '3blue1brown.jpg'
 Card.create name: 'HTTP 401', image: '401.jpg'
 Card.create name: 'Berkshire Brewing Company Steel Rail Extra Pale Ale', image: 'bbc_steel_rail.png'
@@ -18,3 +11,30 @@ Card.create name: 'My dogs', image: 'my_dogs.jpg'
 Card.create name: 'A turret from Portal', image: 'portal_turret.jpg'
 Card.create name: 'Russian classical composer Sergei Rachamaninoff', image: 'rachmaninoff.jpg'
 Card.create name: 'W.E.B DuBois Memorial Library at UMass', image: 'web_dubois_library.jpg'
+Card.create name: 'An aardvark', image: 'aardvark.jpg'
+Card.create name: 'A piano', image: 'piano.jpg'
+Card.create name: 'Colored pencils', image: 'colored_pencils.jpg'
+Card.create name: 'A ball of rubber bands', image: 'rubberbands.jpg'
+Card.create name: 'Wagon wheels', image: 'wagonwheels.jpg'
+Card.create name: 'A school of fish', image: 'schoolfish.jpg'
+Card.create name: 'The steering wheel of an antique car', image: 'antiquecar.jpg'
+Card.create name: 'A pair of boots sitting on a set of stairs', image: 'bootsonstairs.jpg'
+Card.create name: 'A spiral staircase', name: 'spiralstaircase.jpg'
+Card.create name: 'A bicycle handlebar', name: 'bicyclehandlebar.jpg'
+Card.create name: 'A ring of colored pencils', name: 'ringpencils.jpg'
+Card.create name: 'An isolated phone booth', name: 'phonebooth.jpg'
+Card.create name: 'Someone riding a bicycle while wearing a VR headset', image: 'bicyclevr.jpg'
+Card.create name: "A bird's eye view of a small island", image: 'island.jpg'
+Card.create name: 'A pair of googly eyes on a small piece of moss', image: 'moss.jpg'
+Card.create name: 'A bear taking a bath', image: 'bear.jpg'
+Card.create name: 'Someone holding a pineapple aloft in a field', image: 'pineapple.jpg'
+Card.create name: 'Tires stacked in a cross-hatch pattern', image: 'tires.jpg'
+Card.create name: 'A cat examines an orange', image: 'catorange.jpg'
+Card.create name: 'Several threads passing through the eye of a needle', image: 'threadsneedle.jpg'
+Card.create name: 'An overly complex gutter downspout', image: 'gutter.jpg'
+Card.create name: 'An image of a lost cat on a tree', image: 'lostcat.jpg'
+Card.create name: 'A wooden walkway winding through some trees', image: 'walkway.jpg'
+Card.create name: 'Bert from Sesame Street sitting on a fencepost', image: 'ernie.jpg'
+Card.create name: 'Cave', image: 'cave.jpg'
+Card.create name: "An easy game of Where's Waldo", image: 'waldo.jpg'
+Card.create name: 'A birthday party for dogs', image: 'dogbirthday.jpg'

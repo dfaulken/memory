@@ -2,7 +2,7 @@ class Game < ApplicationRecord
 	has_many :game_cards
 	has_many :cards, through: :game_cards, dependent: :destroy
 
-	validates :rows, presence: true, numericality: { greater_than: 1, less_than: 11 }
+	validates :rows, presence: true, numericality: { greater_than: 1, less_than: 9 }
 	validates :columns, presence: true, numericality: { greater_than: 1, less_than: 11 }
 	validates :group_size, presence: true, numericality: { greater_than: 1, less_than: 11 }
 	validates_with GameDimensionsValidator
